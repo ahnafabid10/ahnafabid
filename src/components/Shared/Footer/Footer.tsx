@@ -12,33 +12,33 @@ import {
 export default function Footer() {
   return (
     <div
-      className="relative h-125 bg-[#b1c2b4]"
+      className="relative h-125 bg-[#0a0a0a]"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       <div className="relative h-[calc(100vh+500px)] top-[-100vh]">
         <div className="h-125 sticky top-[calc(100vh-500px)]">
-          <footer className="text-white max-w-360 mx-auto flex flex-col h-125 justify-between gap-2 overflow-hidden">
+          <footer className="text-white/80 max-w-360 mx-auto flex flex-col h-125 justify-between gap-2 overflow-hidden">
             {/* Actual Footer Content */}
             <div className="px-4 md:px-8 pt-16 w-full relative z-10">
               <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-8">
 
                 {/* Links */}
-                <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-white text-sm md:text-base font-medium">
+                <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-white/80 text-sm md:text-base font-medium">
                   <Link
                     href="#"
-                    className="hover:text-white transition-colors duration-300"
+                    className="text-white/80 hover:text-white/80 transition-colors duration-300"
                   >
                     Terms & Conditions
                   </Link>
                   <Link
                     href="#"
-                    className="hover:text-white transition-colors duration-300"
+                    className="text-white/80 hover:text-white/80 transition-colors duration-300"
                   >
                     Refund Policy
                   </Link>
                   <Link
                     href="#"
-                    className="hover:text-white transition-colors duration-300"
+                    className="text-white/80 hover:text-white/80 transition-colors duration-300"
                   >
                     Privacy Policy
                   </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
 
               {/* Bottom Section */}
               <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6">
-                <p className="text-white text-sm">
+                <p className="text-white/80 text-sm">
                   © {new Date().getFullYear()} Abid Nirob | All rights reserved
                 </p>
 
@@ -60,7 +60,7 @@ export default function Footer() {
                     href="https://www.linkedin.com/in/ahnafabid10"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="text-white hover:text-[#d2ddd4] transition-all duration-300 hover:scale-110"
+                    className="text-white/50 hover:text-white/80 transition-all duration-300 hover:scale-110"
                     aria-label="LinkedIn"
                   >
                     <FaLinkedin className="h-5 w-5" />
@@ -69,7 +69,7 @@ export default function Footer() {
                     href="https://x.com/ahnafabid03"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="text-white hover:text-[#d2ddd4] transition-all duration-300 hover:scale-110"
+                    className="text-white/50 hover:text-white/80 transition-all duration-300 hover:scale-110"
                     aria-label="X (Twitter)"
                   >
                     <FaTwitter className="h-5 w-5" />
@@ -78,7 +78,7 @@ export default function Footer() {
                     href="https://www.facebook.com/ahnafabid04"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="text-white hover:text-[#d2ddd4] transition-all duration-300 hover:scale-110"
+                    className="text-white/50 hover:text-white/80 transition-all duration-300 hover:scale-110"
                     aria-label="Facebook"
                   >
                     <FaFacebook className="h-5 w-5" />
@@ -87,7 +87,7 @@ export default function Footer() {
                     href="https://www.instagram.com/ahnafabid10"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="text-white hover:text-[#d2ddd4] transition-all duration-300 hover:scale-110"
+                    className="text-white/50 hover:text-white/80 transition-all duration-300 hover:scale-110"
                     aria-label="Instagram"
                   >
                     <FaInstagram className="h-5 w-5" />
@@ -96,7 +96,7 @@ export default function Footer() {
                     href="https://www.youtube.com/@ahnafabidnirob"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="text-white hover:text-[#d2ddd4] transition-all duration-300 hover:scale-110"
+                    className="text-white/50 hover:text-white/80 transition-all duration-300 hover:scale-110"
                     aria-label="YouTube"
                   >
                     <FaYoutube className="h-5 w-5" />
@@ -105,7 +105,7 @@ export default function Footer() {
                     href="https://discord.gg/abid420"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="text-white hover:text-[#d2ddd4] transition-all duration-300 hover:scale-110"
+                    className="text-white/50 hover:text-white/80 transition-all duration-300 hover:scale-110"
                     aria-label="Discord"
                   >
                     <FaDiscord className="h-5 w-5" />
@@ -114,7 +114,7 @@ export default function Footer() {
                     href="https://bsky.app/profile/ahnafabidnirob.bsky.social"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="text-white hover:text-[#d2ddd4] transition-all duration-300 hover:scale-110"
+                    className="text-white/50 hover:text-white/80 transition-all duration-300 hover:scale-110"
                     aria-label="Bluesky"
                   >
                     <FaBluesky className="h-5 w-5" />
@@ -139,6 +139,7 @@ export default function Footer() {
                     leading-none
                     select-none
                     font-display
+                    text-white/80
                     mask-[linear-gradient(to_bottom,black_0%,black_20%,transparent_80%)]
                 "
                 >

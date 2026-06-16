@@ -6,13 +6,13 @@ const AboutMe = () => {
     <section className="section-bg px-4 py-24 text-white sm:px-6 lg:px-8">
       <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-12 lg:flex-row lg:gap-16">
         <div className="flex-1">
-          <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#b1c2b4]">
+          <p className="text-sm font-bold uppercase tracking-[0.28em] text-white/50">
             About Me
           </p>
 
           <div className="mt-7 space-y-5 text-base leading-8 text-white/50 sm:text-lg">
             <p>
-              I&apos;m <span className="font-semibold text-[#d2ddd4]">
+              I&apos;m <span className="font-semibold text-white/80">
                 Ahnaf Abid
               </span>, a Full Stack Developer focused on building
               modern web applications that balance performance, scalability,
@@ -22,7 +22,7 @@ const AboutMe = () => {
             </p>
             <p>
               Currently at{" "}
-              <span className="font-semibold text-[#d2ddd4]">
+              <span className="font-semibold text-white/80">
                 Avirosoft
               </span>
               , I work on developing and maintaining applications that solve
