@@ -4,13 +4,13 @@ import ahnaf from "../../../public/Ahnaf Abid.jpg";
 const AboutMe = () => {
   return (
     <section className="section-bg px-4 py-24 text-white sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-12 lg:flex-row lg:gap-16">
+      <div className="mx-auto flex max-w-[1350px] flex-col-reverse items-center gap-12 lg:flex-row ">
         <div className="flex-1">
           <p className="text-sm font-bold uppercase tracking-[0.28em] text-white/50">
             About Me
           </p>
 
-          <div className="mt-7 space-y-5 text-base leading-8 text-white/50 sm:text-lg">
+          <div className="mt-7 space-y-5 text-base leading-8 text-white/50 sm:text-lg w-full">
             <p>
               I&apos;m <span className="font-semibold text-white/80">
                 Ahnaf Abid

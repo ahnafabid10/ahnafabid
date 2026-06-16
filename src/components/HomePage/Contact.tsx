@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <section className="section-bg px-4 py-24 text-white sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-[1350px] flex flex-col lg:flex-row justify-between gap-10 md:gap-25">
+      <div className="mx-auto max-w-[1350px] flex flex-col lg:flex-row justify-between gap-10 lg:gap-16">
         {/* Left column */}
         <div className="w-full lg:w-1/2">
           <p className="text-sm font-bold uppercase tracking-[0.28em] text-white/50">
