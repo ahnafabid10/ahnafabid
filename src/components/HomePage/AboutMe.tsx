@@ -3,7 +3,7 @@ import ahnaf from "../../../public/Ahnaf Abid.jpg";
 
 const AboutMe = () => {
   return (
-    <section className="section-bg px-4 py-24 text-white sm:px-6 lg:px-8">
+    <section id="about" className="section-bg px-4 py-24 text-white sm:px-6 lg:px-8">
       <div className="mx-auto flex max-w-[1350px] flex-col-reverse items-center gap-12 lg:flex-row ">
         <div className="flex-1">
           <p className="text-sm font-bold uppercase tracking-[0.28em] text-white/50">

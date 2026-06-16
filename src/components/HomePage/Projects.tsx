@@ -78,11 +78,8 @@ const Projects = () => {
         <p className="text-sm font-bold uppercase tracking-[0.28em] text-white/50">
           Projects
         </p>
-        <h2 className="mt-3 text-3xl font-bold text-white/80 sm:text-4xl">
-          Things I&apos;ve Built
-        </h2>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div
               key={project.id}
