@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* About Me & Contact: always dark regardless of system theme */
+.section-bg {
+  display: block;
+  background-color: #0a0a0a;
+}

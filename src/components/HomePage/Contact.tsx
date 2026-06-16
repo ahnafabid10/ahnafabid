@@ -18,7 +18,11 @@ const Contact = () => {
           <div className="mt-10 space-y-2 text-base text-white/50 sm:text-lg">
             <div className="flex items-center justify-between border-t border-white/10 py-4">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/30">Email</span>
-              <span className="text-xs font-bold tracking-[0.2em] text-white/70">abidnirob10@gmail.com</span>
+              <span className="text-xs font-bold tracking-[0.2em] text-white/70">
+                <a href="mailto:abidnirob10@gmail.com" className="hover:text-white transition-colors duration-200">
+                  abidnirob10@gmail.com
+                </a>
+              </span>
             </div>
             <div className="flex items-center justify-between border-t border-white/10 py-4">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/30">Based in</span>
