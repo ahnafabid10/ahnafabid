@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
   SiHtml5,
   SiCss,
@@ -30,16 +33,16 @@ interface Tech {
 }
 
 const frontend: Tech[] = [
-  { name: "HTML5",       icon: SiHtml5,       color: "#E34F26" },
-  { name: "CSS3",        icon: SiCss,         color: "#1572B6" },
-  { name: "JavaScript",  icon: SiJavascript,  color: "#F7DF1E" },
-  { name: "TypeScript",  icon: SiTypescript,  color: "#3178C6" },
-  { name: "React.js",    icon: SiReact,       color: "#61DAFB" },
-  { name: "React Router",icon: SiReactrouter, color: "#CA4245" },
-  { name: "Next.js",     icon: SiNextdotjs,   color: "#ffffff" },
-  { name: "Tailwind CSS",icon: SiTailwindcss, color: "#06B6D4" },
-  { name: "Redux",       icon: SiRedux,       color: "#764ABC" },
-  { name: "Figma",       icon: SiFigma,       color: "#F24E1E" },
+  { name: "HTML5",        icon: SiHtml5,       color: "#E34F26" },
+  { name: "CSS3",         icon: SiCss,         color: "#1572B6" },
+  { name: "JavaScript",   icon: SiJavascript,  color: "#F7DF1E" },
+  { name: "TypeScript",   icon: SiTypescript,  color: "#3178C6" },
+  { name: "React.js",     icon: SiReact,       color: "#61DAFB" },
+  { name: "React Router", icon: SiReactrouter, color: "#CA4245" },
+  { name: "Next.js",      icon: SiNextdotjs,   color: "#ffffff" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "Redux",        icon: SiRedux,       color: "#764ABC" },
+  { name: "Figma",        icon: SiFigma,       color: "#F24E1E" },
 ];
 
 const backend: Tech[] = [
@@ -57,23 +60,65 @@ const backend: Tech[] = [
   { name: "Netlify",    icon: SiNetlify,       color: "#00C7B7" },
 ];
 
-interface TechGridProps {
-  items: Tech[];
+interface TechBadgeProps {
+  name: string;
+  icon: React.ElementType;
+  color: string;
 }
 
-const TechGrid = ({ items }: TechGridProps) => (
-  <div className="flex flex-wrap gap-3">
-    {items.map(({ name, icon: Icon, color }) => (
-      <div
-        key={name}
-        className="flex items-center gap-2.5 rounded-lg border border-white/8 bg-white/4 px-4 py-3 transition hover:border-white/20"
-      >
-        <Icon className="h-4 w-4 shrink-0" style={{ color }} />
-        <span className="text-xs font-medium text-white/60">{name}</span>
-      </div>
-    ))}
+const TechBadge = ({ name, icon: Icon, color }: TechBadgeProps) => (
+  <div className="flex shrink-0 items-center gap-2.5 rounded-lg border border-white/8 bg-white/4 px-4 py-3 mx-2">
+    <Icon className="h-4 w-4 shrink-0" style={{ color }} />
+    <span className="text-xs font-medium text-white/60 whitespace-nowrap">{name}</span>
   </div>
 );
+
+interface MarqueeRowProps {
+  items: Tech[];
+  direction: "left" | "right";
+  duration?: number;
+}
+
+const MarqueeRow = ({ items, direction, duration = 30 }: MarqueeRowProps) => {
+  // Duplicate items for seamless loop
+  const doubled = [...items, ...items];
+  const xFrom = direction === "left" ? 0 : "-50%";
+  const xTo   = direction === "left" ? "-50%" : 0;
+
+  return (
+    <div className="relative overflow-hidden w-full">
+      {/* Left fade */}
+      <div
+        className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10"
+        style={{
+          background: "linear-gradient(to right, #0a0a0a 0%, transparent 100%)",
+        }}
+      />
+      {/* Right fade */}
+      <div
+        className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10"
+        style={{
+          background: "linear-gradient(to left, #0a0a0a 0%, transparent 100%)",
+        }}
+      />
+
+      <motion.div
+        className="flex w-max"
+        animate={{ x: [xFrom, xTo] }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "linear",
+          duration,
+        }}
+      >
+        {doubled.map((tech, i) => (
+          <TechBadge key={`${tech.name}-${i}`} {...tech} />
+        ))}
+      </motion.div>
+    </div>
+  );
+};
 
 const TechStacks = () => {
   return (
@@ -83,8 +128,11 @@ const TechStacks = () => {
           Tech Stack
         </p>
 
-        <div className="mt-12">
-          <TechGrid items={[...frontend, ...backend]} />
+        <div className="mt-12 flex flex-col gap-4 overflow-hidden">
+          {/* Row 1 — left to right */}
+          <MarqueeRow items={frontend} direction="right" duration={28} />
+          {/* Row 2 — right to left */}
+          <MarqueeRow items={backend} direction="left" duration={35} />
         </div>
       </div>
     </section>

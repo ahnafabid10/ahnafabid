@@ -27,7 +27,7 @@ const projects: Project[] = [
     image: careerpilot,
     liveLink: "https://eg-careerpilot-asyncawait.vercel.app",
     githubLink: "https://github.com/alvy00/eg-careerpilot-asyncawait",
-    topStacks: ["Next.js", "Node.js", "Express.js", "MongoDB", "Gemini API", "Tailwind CSS", "JWT", "Axios"],
+    topStacks: ["Next.js", "Node.js", "Express.js", "MongoDB", "Gemini API", "TypeScript", "JWT", "Ten Stack Query"],
   },
   {
     id: 2,
