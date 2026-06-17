@@ -20,8 +20,9 @@ export function Navbar() {
   const [isScrolled,  setIsScrolled]  = useState(false);
   const [isMenuOpen,  setIsMenuOpen]  = useState(false);
 
-  const pathname  = usePathname();
-  const menuRef   = useRef<HTMLDivElement>(null);
+  const pathname   = usePathname();
+  const isHomePage = pathname === '/';
+  const menuRef    = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
   // ── Scroll + outside-click ───────────────────────────────────────────────
@@ -53,7 +54,9 @@ export function Navbar() {
   const linkClass = (href: string) =>
     cn(
       'font-medium transition-colors duration-200',
-      pathname === href ? 'text-white' : 'text-white/50 hover:text-white',
+      isHomePage
+        ? pathname === href ? 'text-white' : 'text-white/50 hover:text-white'
+        : pathname === href ? 'text-[#07090a]' : 'text-[#07090a]/50 hover:text-[#07090a]',
     );
 
   return (

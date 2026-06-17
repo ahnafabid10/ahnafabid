@@ -165,7 +165,7 @@ export default function Pomodoro() {
   // ─── Render ─────────────────────────────────────────────────────────────────
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col">
+    <div className="min-h-screen bg-[#f5f5f0] text-[#1a1a1a] flex flex-col">
       <div className="flex flex-1 flex-col lg:flex-row">
 
         {/* ── Timer section ── */}
@@ -179,8 +179,8 @@ export default function Pomodoro() {
                 onClick={() => switchMode(key)}
                 className={`text-sm font-bold tracking-tight pb-1 transition-colors ${
                   mode === key
-                    ? 'text-white border-b-2 border-white'
-                    : 'text-white/30 hover:text-white/60 border-b-2 border-transparent'
+                    ? 'text-[#1a1a1a] border-b-2 border-[#1a1a1a]'
+                    : 'text-[#aaa] hover:text-[#555] border-b-2 border-transparent'
                 }`}
               >
                 {val.label}
@@ -199,11 +199,11 @@ export default function Pomodoro() {
               style={{ transform: 'rotate(-90deg)' }}
               aria-hidden="true"
             >
-              <circle cx="50" cy="50" r={SVG_RADIUS} fill="none" stroke="#ffffff18" strokeWidth="2.5" />
+              <circle cx="50" cy="50" r={SVG_RADIUS} fill="none" stroke="#ddd" strokeWidth="2.5" />
               <circle
                 cx="50" cy="50" r={SVG_RADIUS}
                 fill="none"
-                stroke="white"
+                stroke="#1a1a1a"
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeDasharray={RING_CIRCUMFERENCE}
@@ -213,7 +213,7 @@ export default function Pomodoro() {
             </svg>
 
             <p
-              className="z-10 font-black tabular-nums leading-none text-white"
+              className="z-10 font-black tabular-nums leading-none text-[#1a1a1a]"
               style={{ fontSize: 'clamp(5rem, 20vw, 9rem)', letterSpacing: '-0.03em' }}
               aria-live="polite"
               aria-label={`${mins} minutes ${secs} seconds remaining`}
@@ -226,13 +226,13 @@ export default function Pomodoro() {
           <div className="flex gap-4 w-full" style={{ maxWidth: 'min(80vw, 520px)' }}>
             <button
               onClick={toggleRunning}
-              className="flex-1 py-5 text-sm font-bold uppercase tracking-[0.25em] bg-white text-[#0a0a0a] hover:bg-white/85 transition-colors"
+              className="flex-1 py-5 text-sm font-bold uppercase tracking-[0.25em] bg-[#1a1a1a] text-white hover:opacity-80 transition-opacity"
             >
               {running ? 'PAUSE' : 'START'}
             </button>
             <button
               onClick={reset}
-              className="flex-1 py-5 text-sm font-bold uppercase tracking-[0.25em] bg-transparent text-white/30 border border-white/15 hover:border-white/50 hover:text-white/70 transition-all"
+              className="flex-1 py-5 text-sm font-bold uppercase tracking-[0.25em] bg-transparent text-[#aaa] border border-[#ccc] hover:border-[#1a1a1a] hover:text-[#1a1a1a] transition-all"
             >
               RESET
             </button>
@@ -245,25 +245,25 @@ export default function Pomodoro() {
           aria-label="Inspirational quote"
         >
           <div
-            className="bg-white/5 border-l border-white/10 p-8 h-full"
+            className="bg-[#eeede8] p-8 h-full"
             style={{ opacity: quoteVisible ? 1 : 0, transition: 'opacity 0.35s ease' }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <span className="w-6 h-px bg-white/40 inline-block shrink-0" aria-hidden="true" />
-              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30">
+              <span className="w-6 h-px bg-[#1a1a1a] inline-block shrink-0" aria-hidden="true" />
+              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#999]">
                 Daily Inspiration
               </span>
             </div>
 
             {quote ? (
               <>
-                <p className="text-xl font-light italic leading-snug text-white/80 mb-6">
+                <p className="text-xl font-light italic leading-snug text-[#1a1a1a] mb-6">
                   &ldquo;{quote.text}&rdquo;
                 </p>
-                <p className="text-xs text-white/30 tracking-wider">— {quote.author}</p>
+                <p className="text-xs text-[#888] tracking-wider">— {quote.author}</p>
               </>
             ) : (
-              <div className="w-8 h-px bg-white/20 animate-pulse" />
+              <div className="w-8 h-px bg-[#ccc] animate-pulse" />
             )}
           </div>
         </aside>
