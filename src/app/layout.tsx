@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Shared/Footer/Footer";
 import Providers from "./providers";
+import { Navbar } from "@/components/Shared/NavBar/NavBar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -71,6 +72,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Providers>
+          <Navbar/>
           {children}
           <Footer />
         </Providers>
