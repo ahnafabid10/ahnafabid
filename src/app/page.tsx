@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import AboutMe from "@/components/HomePage/AboutMe";
 import Banner from "@/components/HomePage/Banner";
 import Contact from "@/components/HomePage/Contact";
 import Projects from "@/components/HomePage/Projects";
 import TechStacks from "@/components/HomePage/TechStacks";
-import Footer from "@/components/Shared/Footer/Footer";
+
+export const metadata: Metadata = {
+  title: "Ahnaf Abid Nirob — Full Stack Developer",
+  description:
+    "Hi, I'm Ahnaf Abid Nirob — a Full Stack Developer building fast, accessible, and scalable web apps with React, Next.js, Node.js, and TypeScript.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (
@@ -13,7 +22,6 @@ export default function Home() {
       <TechStacks/>
       <Projects/>
       <Contact/>
-      <Footer/>
     </div>
   );
 }
