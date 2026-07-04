@@ -10,9 +10,8 @@ import {
 
 export default function Footer() {
   return (
-    <div className="bg-black">
-      <div className="h-90 md:125 sticky top-[calc(100vh-350px)] md:top-[calc(100vh-500px)] ">
-        <footer className="text-white/80 max-w-337.5 mx-auto flex flex-col h-90 md:h-125 justify-between gap-2 overflow-hidden">
+    <div className="w-full bg-[#0a0a0a] text-[#ededed]">
+        <footer className="max-w-337.5 mx-auto flex flex-col h-90 md:h-125 justify-between gap-2 overflow-hidden text-[#ededed]">
           {/* Actual Footer Content */}
           <div className="px-4 md:px-8 pt-16 w-full relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-8">
@@ -142,7 +141,7 @@ export default function Footer() {
             </h1>
           </section>
         </footer>
-      </div>
+
     </div>
   );
 }

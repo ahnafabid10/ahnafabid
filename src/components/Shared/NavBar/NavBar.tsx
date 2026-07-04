@@ -24,6 +24,10 @@ export function Navbar() {
   const menuRef   = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
+  if (pathname?.startsWith('/tools')) {
+    return null;
+  }
+
   // ── Scroll + outside-click ───────────────────────────────────────────────
 
   useEffect(() => {
