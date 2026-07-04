@@ -74,7 +74,7 @@ const projects: Project[] = [
 const Projects = () => {
   return (
     <section className="section-bg px-4 py-24 text-white sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-[1350px]">
+      <div className="mx-auto max-w-337.5">
         <p className="text-sm font-bold uppercase tracking-[0.28em] text-white/50">
           Projects
         </p>
