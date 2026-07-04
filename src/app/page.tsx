@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import AboutMe from "@/components/HomePage/AboutMe";
 import Banner from "@/components/HomePage/Banner";
-import Contact from "@/components/HomePage/Contact";
 import Projects from "@/components/HomePage/Projects";
 import TechStacks from "@/components/HomePage/TechStacks";
 
@@ -21,7 +20,6 @@ export default function Home() {
       <AboutMe/>
       <TechStacks/>
       <Projects/>
-      <Contact/>
     </div>
   );
 }

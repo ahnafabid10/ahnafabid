@@ -11,11 +11,7 @@ import {
 
 export default function Footer() {
   return (
-    <div
-      className="relative h-90 md:h-125 bg-[#0a0a0a]"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
-    >
-      <div className="relative h-[calc(100vh+350px)] md:h-[calc(100vh+500px)] top-[-100vh]">
+    <div>
         <div className="h-90 md:125 sticky top-[calc(100vh-350px)] md:top-[calc(100vh-500px)] ">
           <footer className="text-white/80 max-w-337.5 mx-auto flex flex-col h-90 md:h-125 justify-between gap-2 overflow-hidden">
             {/* Actual Footer Content */}
@@ -23,7 +19,7 @@ export default function Footer() {
               <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-8">
 
                 {/* Links */}
-                <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-white/80 text-sm md:text-base font-medium">
+                {/* <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-white/80 text-sm md:text-base font-medium">
                   <Link
                     href="#"
                     className="text-white/80 hover:text-white/80 transition-colors duration-300"
@@ -42,7 +38,7 @@ export default function Footer() {
                   >
                     Privacy Policy
                   </Link>
-                </div>
+                </div> */}
               </div>
 
               {/* Divider */}
@@ -148,7 +144,6 @@ export default function Footer() {
             </section>
           </footer>
         </div>
-      </div>
     </div>
   );
 }
