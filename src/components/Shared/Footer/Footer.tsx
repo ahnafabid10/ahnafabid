@@ -11,7 +11,7 @@ import {
 
 export default function Footer() {
   return (
-    <div>
+    <div className="bg-[#0a0a0a]">
         <div className="h-90 md:125 sticky top-[calc(100vh-350px)] md:top-[calc(100vh-500px)] ">
           <footer className="text-white/80 max-w-337.5 mx-auto flex flex-col h-90 md:h-125 justify-between gap-2 overflow-hidden">
             {/* Actual Footer Content */}
