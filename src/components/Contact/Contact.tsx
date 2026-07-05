@@ -108,10 +108,9 @@ export default function ContactSection() {
                     <h2 className="mt-4 text-3xl font-bold text-white/90 sm:text-4xl">
                         Let's Build Tomorrow Together
                     </h2>
-                    <p className="mt-3 text-base leading-7 text-white/45 mb-10 w-4xl">
+                    <p className="mt-3 text-base leading-7 text-white/45 mb-10">
                         Whether you have a project in mind, want to collaborate, or just
-                        want to say hi,I&apos;m always happy to chat. Reach out and
-                        I&apos;ll get back to you as soon as I can.
+                        want to say hi,I&apos;m always happy to chat.
                     </p>
                 </div>
 
@@ -124,7 +123,7 @@ export default function ContactSection() {
                             Start a conversation<br />with me
                         </h2>
                         <p className="mt-4 text-[15px] leading-7 text-white/50">
-                            Fill out the form and I'll get back to you.
+                            Reach out and I&apos;ll get back to you as soon as I can.
                         </p>
 
                         <div className="mt-8 space-y-5">
