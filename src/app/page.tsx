@@ -3,6 +3,7 @@ import AboutMe from "@/components/HomePage/AboutMe";
 import Banner from "@/components/HomePage/Banner";
 import Projects from "@/components/HomePage/Projects";
 import TechStacks from "@/components/HomePage/TechStacks";
+import ContactSection from "@/components/HomePage/Contact";
 
 export const metadata: Metadata = {
   title: "Ahnaf Abid Nirob — Full Stack Developer",
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutMe/>
       <TechStacks/>
       <Projects/>
+      <ContactSection/>
     </div>
   );
 }
