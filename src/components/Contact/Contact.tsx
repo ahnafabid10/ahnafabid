@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, Mail, Clock, Users } from "lucide-react";
+import { Send, Mail, Clock, Users, MapPin } from "lucide-react";
 
 const inputCls =
     "w-full rounded-lg border border-white/10 bg-white/5 px-3.5 py-3 text-sm text-white placeholder:text-white/25 outline-none focus:border-white/30 transition";
@@ -104,10 +104,6 @@ export default function ContactSection() {
     return (
         <section id="contact-form" className="section-bg px-4 py-24 text-white sm:px-6 lg:px-8">
             <div className="mx-auto max-w-337.5">
-                <p className="text-sm font-bold uppercase tracking-[0.28em] text-white/50 mb-10">
-                    Contact
-                </p>
-
                 <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
 
                     {/* ── Left side ── */}
@@ -122,9 +118,10 @@ export default function ContactSection() {
                         </p>
 
                         <div className="mt-8 space-y-5">
-                            <InfoItem icon={Mail}  title="Email"         subtitle="abidnirob10@gmail.com" href="mailto:abidnirob10@gmail.com" />
+                            <InfoItem icon={Mail} title="Email" subtitle="abidnirob10@gmail.com" href="mailto:abidnirob10@gmail.com" />
+                            <InfoItem icon={MapPin} title="Location" subtitle="Based In Mymensingh, Bangladesh" />
                             <InfoItem icon={Clock} title="Response time" subtitle="Within 48 hours" />
-                            <InfoItem icon={Users} title="Open to"       subtitle="Freelance, Full-time & Collaboration" />
+                            <InfoItem icon={Users} title="Open to" subtitle="Freelance, Full-time & Collaboration" />
                         </div>
                     </div>
 
