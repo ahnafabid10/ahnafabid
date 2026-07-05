@@ -1,6 +1,9 @@
+'use client';
+
 import Image, { StaticImageData } from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
+import Link from "next/link";
 
 import careerpilot from "../../../public/projects/careerpilot.jpg";
 import lifeLesson from "../../../public/projects/life-lessons.png";
@@ -11,6 +14,7 @@ import hero from "../../../public/projects/hero.png";
 interface Project {
   id: number;
   name: string;
+  slug: string;
   description: string;
   image: StaticImageData;
   liveLink: string;
@@ -22,6 +26,7 @@ const projects: Project[] = [
   {
     id: 1,
     name: "CareerPilot",
+    slug: "careerpilot",
     description:
       "An AI-powered career roadmap generator that provides personalized, step-by-step learning paths based on a user's career goals and experience level.",
     image: careerpilot,
@@ -32,6 +37,7 @@ const projects: Project[] = [
   {
     id: 2,
     name: "Digital Life Lessons",
+    slug: "digital-life-lessons",
     description:
       "A platform for creating, storing, and sharing meaningful life lessons and personal growth insights, featuring public/private visibility and a premium subscription model.",
     image: lifeLesson,
@@ -42,6 +48,7 @@ const projects: Project[] = [
   {
     id: 3,
     name: "TravelEase",
+    slug: "travelease",
     description:
       "A full-stack vehicle rental and trip management platform where users can list, book, and manage vehicles with a modern, responsive interface.",
     image: travelease,
@@ -52,6 +59,7 @@ const projects: Project[] = [
   {
     id: 4,
     name: "GreenNest",
+    slug: "greennest",
     description:
       "A single-page web application built for plant lovers who want to nurture and decorate their homes with beautiful indoor plants.",
     image: greennest,
@@ -62,6 +70,7 @@ const projects: Project[] = [
   {
     id: 5,
     name: "Hero IO",
+    slug: "hero-io",
     description:
       "A production-ready, responsive web application that simulates a real-world app store experience. Users can browse applications, view detailed analytics, and manage their installations.",
     image: hero,
@@ -81,8 +90,9 @@ const Projects = () => {
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <div
+            <Link
               key={project.id}
+              href={`/projects/${project.slug}`}
               className="group flex flex-col overflow-hidden rounded-xl border border-white/8 bg-white/4 backdrop-blur-sm transition hover:border-white/15"
             >
               {/* Image with icons on top-right */}
@@ -104,6 +114,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/50 text-white/70 backdrop-blur-sm transition hover:border-white/40 hover:text-white"
                     aria-label="GitHub"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <FaGithub className="h-4 w-4" />
                   </a>
@@ -113,6 +124,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/50 text-white/70 backdrop-blur-sm transition hover:border-white/40 hover:text-white"
                     aria-label="Live site"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
@@ -128,7 +140,7 @@ const Projects = () => {
                   {project.description}
                 </p>
 
-                {/* Tech tags — all 8 */}
+                {/* Tech tags */}
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.topStacks.map((stack) => (
                     <span
@@ -140,7 +152,7 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

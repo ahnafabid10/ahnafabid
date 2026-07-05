@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "CareerPilot",
+    "slug": "careerpilot",
+    "description": "An AI-powered career roadmap generator that provides personalized, step-by-step learning paths based on a user's career goals and experience level.",
+    "image": "/projects/careerpilot.jpg",
+    "liveLink": "https://eg-careerpilot-asyncawait.vercel.app",
+    "githubLink": "https://github.com/alvy00/eg-careerpilot-asyncawait",
+    "topStacks": ["Next.js", "Node.js", "Express.js", "MongoDB", "Gemini API", "TypeScript", "JWT", "Ten Stack Query"],
+    "hook": "Many aspiring developers struggle to find a clear, structured learning path for their desired career. They waste time jumping between random tutorials without knowing what to learn next or how to build real-world skills.",
+    "screenshots": ["/projects/careerpilot.jpg"],
+    "solution": "CareerPilot uses AI (Gemini API) to generate personalized, step-by-step career roadmaps. Users input their target role and experience level, and the app creates a complete learning path with curated resources, milestones, and progress tracking.",
+    "techStack": [
+      { "name": "Next.js", "purpose": "Frontend framework for SSR and routing" },
+      { "name": "Node.js", "purpose": "Runtime for the backend API" },
+      { "name": "Express.js", "purpose": "REST API server" },
+      { "name": "MongoDB", "purpose": "NoSQL database for storing user data and roadmaps" },
+      { "name": "Gemini API", "purpose": "AI-powered roadmap generation" },
+      { "name": "TypeScript", "purpose": "Type-safe development across the stack" },
+      { "name": "JWT", "purpose": "Secure authentication" },
+      { "name": "TanStack Query", "purpose": "Server state management and caching" }
+    ],
+    "challenge": "Integrating the Gemini API to produce consistent, structured roadmap JSON while handling rate limits and parsing errors. Also, managing complex nested state for multi-step roadmap progress.",
+    "impact": "Helped users reduce decision fatigue by providing clear, actionable learning paths. The personalized approach increased user engagement and completion rates compared to static resource lists.",
+    "links": {
+      "live": "https://eg-careerpilot-asyncawait.vercel.app",
+      "github": "https://github.com/alvy00/eg-careerpilot-asyncawait",
+      "caseStudy": ""
+    }
+  },
+  {
+    "id": 2,
+    "name": "Digital Life Lessons",
+    "slug": "digital-life-lessons",
+    "description": "A platform for creating, storing, and sharing meaningful life lessons and personal growth insights, featuring public/private visibility and a premium subscription model.",
+    "image": "/projects/life-lessons.png",
+    "liveLink": "https://digital-life-lesson11.netlify.app/",
+    "githubLink": "https://github.com/ahnafabid10/digital-life-lessons-client-side",
+    "topStacks": ["React.js", "Node.js", "Express.js", "MongoDB", "Firebase", "Stripe", "Swagger", "React Query"],
+    "hook": "People collect wisdom over a lifetime, but there's no dedicated space to document, organize, and share life lessons with others—or keep them private for personal reflection.",
+    "screenshots": ["/projects/life-lessons.png"],
+    "solution": "A full-stack platform where users can write life lessons, tag them by category, control visibility (public/private), and subscribe to premium features for advanced organization and insights.",
+    "techStack": [
+      { "name": "React.js", "purpose": "Interactive UI for creating and browsing lessons" },
+      { "name": "Node.js", "purpose": "Backend runtime" },
+      { "name": "Express.js", "purpose": "API server" },
+      { "name": "MongoDB", "purpose": "Database for lessons and user data" },
+      { "name": "Firebase", "purpose": "Authentication and real-time features" },
+      { "name": "Stripe", "purpose": "Premium subscription payments" },
+      { "name": "Swagger", "purpose": "API documentation" },
+      { "name": "React Query", "purpose": "Efficient data fetching and caching" }
+    ],
+    "challenge": "Implementing a flexible visibility system where content could be public, private, or unlisted, while ensuring proper authorization checks at every API layer. Also, integrating Stripe subscriptions with role-based access.",
+    "impact": "Created a niche community for personal growth. Users reported that documenting lessons regularly improved their self-awareness and decision-making over time.",
+    "links": {
+      "live": "https://digital-life-lesson11.netlify.app/",
+      "github": "https://github.com/ahnafabid10/digital-life-lessons-client-side",
+      "caseStudy": ""
+    }
+  },
+  {
+    "id": 3,
+    "name": "TravelEase",
+    "slug": "travelease",
+    "description": "A full-stack vehicle rental and trip management platform where users can list, book, and manage vehicles with a modern, responsive interface.",
+    "image": "/projects/travelease.png",
+    "liveLink": "https://traveleaseb12a10.netlify.app/",
+    "githubLink": "https://github.com/ahnafabid10/TravelEase-client-side",
+    "topStacks": ["React.js", "Node.js", "Express.js", "MongoDB", "Firebase", "Tailwind CSS", "React Router", "Axios"],
+    "hook": "Travelers often struggle to find reliable, local vehicle rentals in one place. Existing solutions are either too complex or lack transparency in pricing and availability.",
+    "screenshots": ["/projects/travelease.png"],
+    "solution": "TravelEase connects vehicle owners with travelers through a simple listing and booking system. Owners can list vehicles with pricing, availability, and images; travelers can search, filter, and book in minutes.",
+    "techStack": [
+      { "name": "React.js", "purpose": "Fast, responsive frontend" },
+      { "name": "Node.js", "purpose": "Backend runtime" },
+      { "name": "Express.js", "purpose": "REST API for bookings and listings" },
+      { "name": "MongoDB", "purpose": "Database for vehicles, users, and bookings" },
+      { "name": "Firebase", "purpose": "Authentication and image storage" },
+      { "name": "Tailwind CSS", "purpose": "Utility-first styling" },
+      { "name": "React Router", "purpose": "Client-side routing" },
+      { "name": "Axios", "purpose": "HTTP client for API calls" }
+    ],
+    "challenge": "Handling concurrent booking requests to prevent double-booking the same vehicle for overlapping dates. Implemented date-range validation and booking status locks to ensure data integrity.",
+    "impact": "Simplified the vehicle rental process for local tourism. Reduced booking friction and gave small vehicle owners a digital presence to reach more customers.",
+    "links": {
+      "live": "https://traveleaseb12a10.netlify.app/",
+      "github": "https://github.com/ahnafabid10/TravelEase-client-side",
+      "caseStudy": ""
+    }
+  },
+  {
+    "id": 4,
+    "name": "GreenNest",
+    "slug": "greennest",
+    "description": "A single-page web application built for plant lovers who want to nurture and decorate their homes with beautiful indoor plants.",
+    "image": "/projects/greennest.png",
+    "liveLink": "https://greennesta9.netlify.app/",
+    "githubLink": "https://github.com/ahnafabid10/GreenNest",
+    "topStacks": ["React.js", "React Router", "Firebase", "Tailwind CSS", "DaisyUI", "Framer Motion", "Swiper.js", "React Hot Toast"],
+    "hook": "Indoor plant enthusiasts often struggle to find reliable care information and curated plant collections in one visually appealing place.",
+    "screenshots": ["/projects/greennest.png"],
+    "solution": "GreenNest offers a curated plant catalog with care guides, watering reminders, and a beautiful browsing experience. Users can explore plants by category, light needs, and difficulty level.",
+    "techStack": [
+      { "name": "React.js", "purpose": "Component-based UI" },
+      { "name": "React Router", "purpose": "SPA navigation" },
+      { "name": "Firebase", "purpose": "Authentication and data storage" },
+      { "name": "Tailwind CSS", "purpose": "Rapid, responsive styling" },
+      { "name": "DaisyUI", "purpose": "Pre-built UI components" },
+      { "name": "Framer Motion", "purpose": "Smooth animations and transitions" },
+      { "name": "Swiper.js", "purpose": "Touch-friendly carousels" },
+      { "name": "React Hot Toast", "purpose": "User notifications" }
+    ],
+    "challenge": "Creating a smooth, app-like experience in a single-page application while keeping bundle size small. Used lazy loading and code splitting for images and heavy components.",
+    "impact": "Provided plant lovers with an easy-to-use, aesthetically pleasing resource for discovering and caring for indoor plants. Improved user engagement through interactive animations.",
+    "links": {
+      "live": "https://greennesta9.netlify.app/",
+      "github": "https://github.com/ahnafabid10/GreenNest",
+      "caseStudy": ""
+    }
+  },
+  {
+    "id": 5,
+    "name": "Hero IO",
+    "slug": "hero-io",
+    "description": "A production-ready, responsive web application that simulates a real-world app store experience. Users can browse applications, view detailed analytics, and manage their installations.",
+    "image": "/projects/hero.png",
+    "liveLink": "https://hero-apps12a8.netlify.app/",
+    "githubLink": "https://github.com/ahnafabid10/hero-apps",
+    "topStacks": ["React 19", "React Router", "Tailwind CSS", "DaisyUI", "Recharts", "Axios", "React Toastify", "Vite"],
+    "hook": "Developers and product managers need a clean way to showcase app portfolios with analytics, but most solutions are either too generic or lack interactive data visualization.",
+    "screenshots": ["/projects/hero.png"],
+    "solution": "Hero IO simulates a real app store with detailed app pages, installation management, and interactive analytics dashboards using charts and filters.",
+    "techStack": [
+      { "name": "React 19", "purpose": "Latest React features and performance improvements" },
+      { "name": "React Router", "purpose": "Declarative routing" },
+      { "name": "Tailwind CSS", "purpose": "Utility-first responsive design" },
+      { "name": "DaisyUI", "purpose": "Consistent UI component library" },
+      { "name": "Recharts", "purpose": "Interactive data visualization" },
+      { "name": "Axios", "purpose": "API data fetching" },
+      { "name": "React Toastify", "purpose": "User feedback notifications" },
+      { "name": "Vite", "purpose": "Fast build tooling and dev server" }
+    ],
+    "challenge": "Implementing responsive, interactive charts that perform well on mobile devices. Optimized Recharts rendering and used memoization to prevent unnecessary re-renders on data updates.",
+    "impact": "Delivered a polished, production-ready app store demo that showcases strong frontend skills. The analytics dashboard became a highlight for portfolio reviewers.",
+    "links": {
+      "live": "https://hero-apps12a8.netlify.app/",
+      "github": "https://github.com/ahnafabid10/hero-apps",
+      "caseStudy": ""
+    }
+  }
+]

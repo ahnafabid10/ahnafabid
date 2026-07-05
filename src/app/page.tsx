@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import AboutMe from "@/components/HomePage/AboutMe";
 import Banner from "@/components/HomePage/Banner";
-import Projects from "@/components/HomePage/Projects";
+import Projects from "@/components/HomePage/ProjectsSectionHome";
 import TechStacks from "@/components/HomePage/TechStacks";
 import ContactSection from "@/components/HomePage/Contact";
 import SmoothScroll from "@/components/Shared/LenisSmoothScroll/SmoothScroll";
