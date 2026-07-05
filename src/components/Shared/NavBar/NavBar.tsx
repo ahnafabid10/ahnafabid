@@ -12,7 +12,7 @@ function cn(...classes: (string | boolean | undefined | null)[]): string {
 const NAV_LINKS = [
   { name: 'About',    href: '#about'    },
   { name: 'Skills',   href: '#skills'   },
-  { name: 'Projects', href: '#projects' },
+  { name: 'Projects', href: 'projects' },
   { name: 'Contact',  href: '#contact'  },
 ];
 
