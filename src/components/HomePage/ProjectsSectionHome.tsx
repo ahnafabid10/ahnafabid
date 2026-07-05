@@ -1,3 +1,4 @@
+"use client"
 import ProjectsCard from "@/components/Projects/ProjectsCard";
 import projectsData from "../../../public/projects.json";
 

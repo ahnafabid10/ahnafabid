@@ -1,5 +1,3 @@
-'use client';
-
 import ProjectsCard from "./ProjectsCard";
 import Link from "next/link";
 
