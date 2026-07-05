@@ -28,6 +28,7 @@ export function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
+    onScroll(); // Check scroll position immediately on mount
 
     const onClickOutside = (e: MouseEvent) => {
       if (!isMenuOpen) return;
