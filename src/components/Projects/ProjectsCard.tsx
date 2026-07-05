@@ -22,20 +22,19 @@ interface ProjectsCardProps {
 
 const ProjectsCard = ({ project }: ProjectsCardProps) => {
   return (
-    <Link
-      href={`/projects/${project.slug}`}
-      className="group flex flex-col overflow-hidden rounded-xl border border-white/8 bg-white/4 backdrop-blur-sm transition hover:border-white/15"
-    >
+    <div className="group flex flex-col overflow-hidden rounded-xl border border-white/8 bg-white/4 backdrop-blur-sm transition hover:border-white/15">
       {/* Image with icons on top-right */}
       <div className="relative aspect-video w-full overflow-hidden">
-        <Image
-          src={project.image}
-          alt={project.name}
-          fill
-          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition duration-500 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-black/30" />
+        <Link href={`/projects/${project.slug}`} className="block h-full w-full">
+          <Image
+            src={project.image}
+            alt={project.name}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-cover transition duration-500 group-hover:scale-105"
+          />
+        </Link>
+        <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
         {/* Top-right icon links */}
         <div className="absolute right-3 top-3 flex gap-2">
@@ -45,7 +44,6 @@ const ProjectsCard = ({ project }: ProjectsCardProps) => {
             rel="noopener noreferrer"
             className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/50 text-white/70 backdrop-blur-sm transition hover:border-white/40 hover:text-white"
             aria-label="GitHub"
-            onClick={(e) => e.stopPropagation()}
           >
             <FaGithub className="h-4 w-4" />
           </a>
@@ -55,7 +53,6 @@ const ProjectsCard = ({ project }: ProjectsCardProps) => {
             rel="noopener noreferrer"
             className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/50 text-white/70 backdrop-blur-sm transition hover:border-white/40 hover:text-white"
             aria-label="Live site"
-            onClick={(e) => e.stopPropagation()}
           >
             <ArrowUpRight className="h-4 w-4" />
           </a>
@@ -63,7 +60,10 @@ const ProjectsCard = ({ project }: ProjectsCardProps) => {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 flex-col p-5">
+      <Link
+        href={`/projects/${project.slug}`}
+        className="flex flex-1 flex-col p-5"
+      >
         <h3 className="text-lg font-semibold text-white/85">
           {project.name}
         </h3>
@@ -82,8 +82,8 @@ const ProjectsCard = ({ project }: ProjectsCardProps) => {
             </span>
           ))}
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 
