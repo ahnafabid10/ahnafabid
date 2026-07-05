@@ -4,6 +4,7 @@ import Banner from "@/components/HomePage/Banner";
 import Projects from "@/components/HomePage/Projects";
 import TechStacks from "@/components/HomePage/TechStacks";
 import ContactSection from "@/components/HomePage/Contact";
+import SmoothScroll from "@/components/Shared/LenisSmoothScroll/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Ahnaf Abid Nirob — Full Stack Developer",
@@ -16,12 +17,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div>
+    <SmoothScroll>
       <Banner/>
       <AboutMe/>
       <TechStacks/>
       <Projects/>
       <ContactSection/>
-    </div>
+    </SmoothScroll>
   );
 }
