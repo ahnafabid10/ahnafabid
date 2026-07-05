@@ -24,10 +24,6 @@ export function Navbar() {
   const menuRef   = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
-  if (pathname?.startsWith('/tools')) {
-    return null;
-  }
-
   // ── Scroll + outside-click ───────────────────────────────────────────────
 
   useEffect(() => {
@@ -51,6 +47,11 @@ export function Navbar() {
       document.removeEventListener('mousedown', onClickOutside);
     };
   }, [isMenuOpen]);
+
+  // In the tools section there will be no navbar
+  if (pathname?.startsWith('/tools')) {
+    return null;
+  }
 
   // ── Shared link classes ──────────────────────────────────────────────────
 
