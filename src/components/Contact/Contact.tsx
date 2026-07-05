@@ -104,6 +104,18 @@ export default function ContactSection() {
     return (
         <section id="contact-form" className="section-bg px-4 py-24 text-white sm:px-6 lg:px-8">
             <div className="mx-auto max-w-337.5">
+                <div className="">
+                    <h2 className="mt-4 text-3xl font-bold text-white/90 sm:text-4xl">
+                        Let's Build Tomorrow Together
+                    </h2>
+                    <p className="mt-3 text-base leading-7 text-white/45 mb-10 w-4xl">
+                        Whether you have a project in mind, want to collaborate, or just
+                        want to say hi,I&apos;m always happy to chat. Reach out and
+                        I&apos;ll get back to you as soon as I can.
+                    </p>
+                </div>
+
+
                 <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
 
                     {/* ── Left side ── */}
@@ -112,15 +124,13 @@ export default function ContactSection() {
                             Start a conversation<br />with me
                         </h2>
                         <p className="mt-4 text-[15px] leading-7 text-white/50">
-                            Whether you have a project in mind, want to collaborate, or just
-                            want to say hi, I&apos;m always happy to chat. Reach out and
-                            I&apos;ll get back to you as soon as I can.
+                            Fill out the form and I'll get back to you.
                         </p>
 
                         <div className="mt-8 space-y-5">
                             <InfoItem icon={Mail} title="Email" subtitle="abidnirob10@gmail.com" href="mailto:abidnirob10@gmail.com" />
                             <InfoItem icon={MapPin} title="Location" subtitle="Based In Mymensingh, Bangladesh" />
-                            <InfoItem icon={Clock} title="Response time" subtitle="Within 48 hours" />
+                            <InfoItem icon={Clock} title="Response time" subtitle="Within 24 hours" />
                             <InfoItem icon={Users} title="Open to" subtitle="Freelance, Full-time & Collaboration" />
                         </div>
                     </div>
