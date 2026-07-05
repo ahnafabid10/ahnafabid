@@ -29,12 +29,14 @@ function InfoItem({
     icon: Icon,
     title,
     subtitle,
+    href,
 }: {
     icon: React.ElementType;
     title: string;
     subtitle: string;
+    href?: string;
 }) {
-    return (
+    const content = (
         <div className="flex items-start gap-3.5">
             <div className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
                 <Icon className="w-5 h-5 text-white/50" strokeWidth={1.5} />
@@ -45,6 +47,16 @@ function InfoItem({
             </div>
         </div>
     );
+
+    if (href) {
+        return (
+            <a href={href} className="block hover:opacity-80 transition-opacity">
+                {content}
+            </a>
+        );
+    }
+
+    return content;
 }
 
 export default function ContactSection() {
@@ -105,12 +117,12 @@ export default function ContactSection() {
                         </h2>
                         <p className="mt-4 text-[15px] leading-7 text-white/50">
                             Whether you have a project in mind, want to collaborate, or just
-                            want to say hi — I&apos;m always happy to chat. Reach out and
+                            want to say hi, I&apos;m always happy to chat. Reach out and
                             I&apos;ll get back to you as soon as I can.
                         </p>
 
                         <div className="mt-8 space-y-5">
-                            <InfoItem icon={Mail}  title="Email"         subtitle="abidnirob10@gmail.com" />
+                            <InfoItem icon={Mail}  title="Email"         subtitle="abidnirob10@gmail.com" href="mailto:abidnirob10@gmail.com" />
                             <InfoItem icon={Clock} title="Response time" subtitle="Within 48 hours" />
                             <InfoItem icon={Users} title="Open to"       subtitle="Freelance, Full-time & Collaboration" />
                         </div>
