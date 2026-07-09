@@ -6,9 +6,7 @@ import SmoothScroll from '@/components/Shared/LenisSmoothScroll/SmoothScroll';
 const page = () => {
     return (
         <SmoothScroll>
-        <div className="min-h-screen">
-            <ToolsPage />
-        </div>
+        <ToolsPage />
         </SmoothScroll>
     );
 };
