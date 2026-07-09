@@ -12,8 +12,8 @@ function cn(...classes: (string | boolean | undefined | null)[]): string {
 const NAV_LINKS = [
   { name: 'About',    href: '#about'    },
   { name: 'Projects', href: '/projects' },
-  { name: 'Tools',   href: '/tools'   },
-  { name: 'Contact',  href: '/contact'  },
+  { name: 'Tools',  href: '/tools'  },
+  // { name: 'Blog',  href: '/blog'  },
 ];
 
 export function Navbar() {
@@ -50,20 +50,12 @@ export function Navbar() {
   }, [isMenuOpen]);
 
 
-  const isLightMode = pathname?.startsWith('/tools') || pathname?.startsWith('/blogs');
-
   // ── Shared link classes ──────────────────────────────────────────────────
 
   const linkClass = (href: string) =>
     cn(
       'font-medium transition-colors duration-200',
-      isLightMode
-        ? pathname === href
-          ? 'text-[#07090a]'
-          : 'text-[#07090a]/50 hover:text-[#07090a]'
-        : pathname === href
-          ? 'text-white'
-          : 'text-white/50 hover:text-white',
+      pathname === href ? 'text-white' : 'text-white/50 hover:text-white',
     );
 
   return (
@@ -78,16 +70,14 @@ export function Navbar() {
         className={cn(
           'mx-auto transition-all duration-300',
           isScrolled
-            ? isLightMode
-              ? 'max-w-5xl rounded-full bg-[#07090a]/10 px-6 py-2 backdrop-blur-md shadow-sm'
-              : 'max-w-5xl rounded-full bg-white/10 px-6 py-2 backdrop-blur-md shadow-sm'
+            ? 'max-w-5xl rounded-full bg-white/10 px-6 py-2 backdrop-blur-md shadow-sm'
             : 'max-w-7xl px-6 py-4',
         )}
       >
         <div className={cn('flex items-center justify-between', isScrolled ? 'h-12' : 'h-16')}>
 
           {/* Brand */}
-          <Link href="/" className={cn('text-lg font-bold tracking-tight transition-colors', isLightMode ? 'text-[#07090a]' : 'text-white')}>
+          <Link href="/" className="text-lg font-bold tracking-tight text-white">
             Abid Nirob
           </Link>
 
@@ -102,13 +92,8 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <Link
-            href="/contact"
-            className={cn(
-              'hidden lg:inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold transition',
-              isLightMode
-                ? 'bg-[#07090a] text-white hover:bg-[#07090a]/85'
-                : 'bg-white text-[#07090a] hover:bg-white/85'
-            )}
+            href="#contact"
+            className="hidden lg:inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#07090a] transition hover:bg-white/85"
           >
             Contact
           </Link>
@@ -120,7 +105,7 @@ export function Navbar() {
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((v) => !v)}
-            className={cn('lg:hidden', isLightMode ? 'text-[#07090a]' : 'text-white')}
+            className="lg:hidden text-white"
           >
             <Menu className="size-6" />
           </button>

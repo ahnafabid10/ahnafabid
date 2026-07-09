@@ -3,9 +3,9 @@ import React from 'react';
 
 const page = () => {
     return (
-        <div className="min-h-screen bg-white text-[#07090a]">
+        <div className="min-h-screen text-[#07090a]">
             <Navbar/>
-            <div className="max-w-3xl mx-auto px-6 py-24">
+            <div className="max-w-3xl text-white mx-auto px-6 py-24">
                 <h1 className="text-4xl font-bold mb-8">Tools</h1>
                 
                 <p>You'd be hard-pressed to find someone who isn't fascinated — or terrified — by Artificial Intelligence these days.</p>

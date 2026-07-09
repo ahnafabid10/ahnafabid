@@ -13,7 +13,7 @@ const AboutMe = () => {
           <div className="mt-7 space-y-5 text-base leading-8 text-white/50 sm:text-lg w-full">
             <p>
               I&apos;m <span className="font-semibold text-white/80">
-                Ahnaf Abid
+                Ahnaf Abid Nirob
               </span>, a Full Stack Developer focused on building
               modern web applications that balance performance, scalability,
               and user experience. Over the years, I&apos;ve worked across both
@@ -21,12 +21,7 @@ const AboutMe = () => {
               production-ready solutions.
             </p>
             <p>
-              Currently at{" "}
-              <span className="font-semibold text-white/80">
-                Avirosoft
-              </span>
-              , I work on developing and maintaining applications that solve
-              real-world problems. Outside of work, I enjoy building side
+              Outside of work, I enjoy building side
               projects, exploring new technologies, and deepening my
               understanding of software engineering.
             </p>
