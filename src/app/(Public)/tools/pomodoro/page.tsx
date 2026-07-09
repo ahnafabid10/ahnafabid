@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         title: "Pomodoro Timer | Ahnaf Abid Nirob",
         description:
             "Boost your productivity with this free Pomodoro Timer. Stay focused with timed work sessions and short breaks.",
-        url: "/tools/pomodoro",
+        url: "/tools/Pomodoro.svg",
     },
     twitter: {
         card: "summary",
