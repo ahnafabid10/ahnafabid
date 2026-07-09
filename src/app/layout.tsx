@@ -72,9 +72,7 @@ export default function RootLayout({
     <html lang="en" className={`${spaceGrotesk.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Providers>
-          <Navbar/>
           {children}
-          <Footer />
         </Providers>
       </body>
     </html>

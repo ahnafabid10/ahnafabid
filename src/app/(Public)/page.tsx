@@ -4,6 +4,7 @@ import Banner from "@/components/HomePage/Banner";
 import Projects from "@/components/HomePage/ProjectsSectionHome";
 import TechStacks from "@/components/HomePage/TechStacks";
 import SmoothScroll from "@/components/Shared/LenisSmoothScroll/SmoothScroll";
+import { Navbar } from "@/components/Shared/NavBar/NavBar";
 
 export const metadata: Metadata = {
   title: "Ahnaf Abid Nirob — Full Stack Developer",

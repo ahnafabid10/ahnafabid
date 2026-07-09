@@ -11,8 +11,8 @@ function cn(...classes: (string | boolean | undefined | null)[]): string {
 
 const NAV_LINKS = [
   { name: 'About',    href: '#about'    },
-  { name: 'Skills',   href: '#skills'   },
   { name: 'Projects', href: '/projects' },
+  { name: 'Tools',   href: '/tools'   },
   { name: 'Contact',  href: '/contact'  },
 ];
 
@@ -50,9 +50,9 @@ export function Navbar() {
   }, [isMenuOpen]);
 
   // In the tools section there will be no navbar
-  if (pathname?.startsWith('/tools')) {
-    return null;
-  }
+  // if (pathname?.startsWith('/tools')) {
+  //   return null;
+  // }
 
   // ── Shared link classes ──────────────────────────────────────────────────
 
@@ -95,12 +95,12 @@ export function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="hidden lg:inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#07090a] transition hover:bg-white/85"
           >
             Contact
-          </a>
+          </Link>
 
           {/* Mobile menu button */}
           <button
@@ -156,13 +156,13 @@ export function Navbar() {
           ))}
         </nav>
 
-        <a
-          href="#contact"
+        <Link
+          href="/contact"
           onClick={() => setIsMenuOpen(false)}
           className="mt-auto rounded-full bg-white px-5 py-3 text-center text-sm font-semibold text-[#07090a] hover:bg-white/85 transition"
         >
-          Hire me
-        </a>
+          Contact
+        </Link>
       </div>
     </nav>
   );
