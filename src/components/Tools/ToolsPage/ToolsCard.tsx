@@ -4,11 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
+interface ToolMeta {
+  description: string;
+}
+
 interface Tool {
   id: number;
   name: string;
   image: string;
   link: string;
+  meta: ToolMeta;
 }
 
 interface ToolsCardProps {
@@ -42,7 +47,8 @@ const ToolsCard = ({ tool }: ToolsCardProps) => {
             </span>
           </div>
 
-          
+          <div className="mt-3 flex flex-wrap gap-1.5">
+          </div>
         </div>
       </div>
     </Link>

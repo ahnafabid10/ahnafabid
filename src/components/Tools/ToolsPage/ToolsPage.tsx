@@ -3,15 +3,17 @@ import Link from "next/link";
 
 import toolsData from "../../../../public/tools.json";
 
+interface ToolMeta {
+  description: string;
+}
+
 interface Tool {
   id: number;
   name: string;
   slug: string;
-  category: string;
-  description: string;
   image: string;
   link: string;
-  tags: string[];
+  meta: ToolMeta;
 }
 
 const ToolsPage = () => {

@@ -4,6 +4,9 @@
     "name": "Pomodoro",
     "slug": "pomodoro",
     "image": "/tools/Promodoro.svg",
-    "link": "/tools/pomodoro"
+    "link": "/tools/pomodoro",
+    "meta": {
+      "description": "A productivity timer that helps you focus using the Pomodoro Technique"
+    }
   }
 ]
