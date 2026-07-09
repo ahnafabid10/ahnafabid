@@ -1,13 +1,16 @@
 import ToolsPage from '@/components/Tools/ToolsPage/ToolsPage';
-import { Navbar } from '@/components/Shared/NavBar/NavBar';
-import Footer from '@/components/Shared/Footer/Footer';
 import SmoothScroll from '@/components/Shared/LenisSmoothScroll/SmoothScroll';
+import PublicLayout from '@/components/Shared/Layouts/PublicLayouts';
 
 const page = () => {
     return (
+        <PublicLayout>
         <SmoothScroll>
         <ToolsPage />
         </SmoothScroll>
+        </PublicLayout>
+
+        
     );
 };
 

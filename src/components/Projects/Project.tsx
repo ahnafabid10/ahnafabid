@@ -3,8 +3,6 @@ import { ArrowUpRight, ArrowLeft } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 import Link from "next/link";
 
-import projectsData from "../../../public/projects.json";
-
 interface TechStackItem {
   name: string;
   purpose: string;
@@ -34,17 +32,27 @@ interface Project {
   links: ProjectLinks;
 }
 
-function getProject(slug: string): Project | null {
-  const projects: Project[] = projectsData;
-  return projects.find((p) => p.slug === slug) || null;
-}
-
 interface ProjectProps {
-  slug: string;
+  project: Project | null;
 }
 
-const Project = ({ slug }: ProjectProps) => {
-  const project = getProject(slug);
+const Project = ({ project }: ProjectProps) => {
+  if (!project) {
+    return (
+      <section className="section-bg min-h-screen px-4 py-12 text-white sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl">
+          <p className="text-white/50">Project not found.</p>
+          <Link
+            href="/projects"
+            className="mt-4 inline-flex items-center gap-2 text-sm text-white/50 transition hover:text-white"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to Projects
+          </Link>
+        </div>
+      </section>
+    );
+  }
 
   if (!project) {
     return (

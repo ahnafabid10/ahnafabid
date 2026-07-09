@@ -3,7 +3,27 @@ import { useParams } from "next/navigation";
 import Project from "./Project";
 import SmoothScroll from "@/components/Shared/LenisSmoothScroll/SmoothScroll";
 
-export default function ProjectWrapper() {
+interface ProjectWrapperProps {
+  project: {
+    id: number;
+    name: string;
+    slug: string;
+    description: string;
+    image: string;
+    liveLink: string;
+    githubLink: string;
+    topStacks: string[];
+    hook: string;
+    screenshots: string[];
+    solution: string;
+    techStack: { name: string; purpose: string }[];
+    challenge: string;
+    impact: string;
+    links: { live: string; github: string; caseStudy: string };
+  } | null;
+}
+
+export default function ProjectWrapper({ project }: ProjectWrapperProps) {
   const params = useParams();
   const slug = params?.slug as string;
 
@@ -21,7 +41,7 @@ export default function ProjectWrapper() {
 
   return (
     <SmoothScroll>
-      <Project slug={slug} />
+      <Project project={project} />
     </SmoothScroll>
   );
 }
