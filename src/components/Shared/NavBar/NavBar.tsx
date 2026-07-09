@@ -92,7 +92,7 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <Link
-            href="#contact"
+            href="/contact"
             className="hidden lg:inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#07090a] transition hover:bg-white/85"
           >
             Contact
