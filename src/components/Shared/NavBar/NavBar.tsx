@@ -49,17 +49,21 @@ export function Navbar() {
     };
   }, [isMenuOpen]);
 
-  // In the tools section there will be no navbar
-  // if (pathname?.startsWith('/tools')) {
-  //   return null;
-  // }
+
+  const isLightMode = pathname?.startsWith('/tools') || pathname?.startsWith('/blogs');
 
   // ── Shared link classes ──────────────────────────────────────────────────
 
   const linkClass = (href: string) =>
     cn(
       'font-medium transition-colors duration-200',
-      pathname === href ? 'text-white' : 'text-white/50 hover:text-white',
+      isLightMode
+        ? pathname === href
+          ? 'text-[#07090a]'
+          : 'text-[#07090a]/50 hover:text-[#07090a]'
+        : pathname === href
+          ? 'text-white'
+          : 'text-white/50 hover:text-white',
     );
 
   return (
@@ -74,14 +78,16 @@ export function Navbar() {
         className={cn(
           'mx-auto transition-all duration-300',
           isScrolled
-            ? 'max-w-5xl rounded-full bg-white/10 px-6 py-2 backdrop-blur-md shadow-sm'
+            ? isLightMode
+              ? 'max-w-5xl rounded-full bg-[#07090a]/10 px-6 py-2 backdrop-blur-md shadow-sm'
+              : 'max-w-5xl rounded-full bg-white/10 px-6 py-2 backdrop-blur-md shadow-sm'
             : 'max-w-7xl px-6 py-4',
         )}
       >
         <div className={cn('flex items-center justify-between', isScrolled ? 'h-12' : 'h-16')}>
 
           {/* Brand */}
-          <Link href="/" className="text-lg font-bold tracking-tight text-white">
+          <Link href="/" className={cn('text-lg font-bold tracking-tight transition-colors', isLightMode ? 'text-[#07090a]' : 'text-white')}>
             Abid Nirob
           </Link>
 
@@ -97,7 +103,12 @@ export function Navbar() {
           {/* Desktop CTA */}
           <Link
             href="/contact"
-            className="hidden lg:inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#07090a] transition hover:bg-white/85"
+            className={cn(
+              'hidden lg:inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold transition',
+              isLightMode
+                ? 'bg-[#07090a] text-white hover:bg-[#07090a]/85'
+                : 'bg-white text-[#07090a] hover:bg-white/85'
+            )}
           >
             Contact
           </Link>
@@ -109,7 +120,7 @@ export function Navbar() {
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((v) => !v)}
-            className="lg:hidden text-white"
+            className={cn('lg:hidden', isLightMode ? 'text-[#07090a]' : 'text-white')}
           >
             <Menu className="size-6" />
           </button>
