@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Shared/Footer/Footer";
 import Providers from "./providers";
-import { Navbar } from "@/components/Shared/NavBar/NavBar";
+import ogImage from "../../public/ogImageAhnafAbidNirob.jpg"
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -42,7 +41,7 @@ export const metadata: Metadata = {
       "Portfolio of Ahnaf Abid Nirob, a Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
     images: [
       {
-        url: "/ogImageAhnafAbidNirob.jpg",
+        url: ogImage.src,
         width: 1200,
         height: 630,
         alt: "Ahnaf Abid Nirob — Full Stack Developer",
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
     title: "Ahnaf Abid Nirob — Full Stack Developer",
     description:
       "Portfolio of Ahnaf Abid Nirob, a Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
-    images: ["/ogImageAhnafAbidNirob.jpg"],
+    images: ogImage.src,
   },
   robots: {
     index: true,
