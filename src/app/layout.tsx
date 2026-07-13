@@ -10,7 +10,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ahnafabidnirob.vercel.app"),
+  metadataBase: new URL("https://abidnirob.com"),
   title: {
     default: "Ahnaf Abid Nirob — Full Stack Developer",
     template: "%s | Ahnaf Abid Nirob",
