@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       "Portfolio of Ahnaf Abid Nirob, a Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
     images: [
       {
-        url: "/Ahnaf Abid.jpg",
+        url: "/ogImageAhnafAbidNirob.jpg",
         width: 1200,
         height: 630,
         alt: "Ahnaf Abid Nirob — Full Stack Developer",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "Ahnaf Abid Nirob — Full Stack Developer",
     description:
       "Portfolio of Ahnaf Abid Nirob, a Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
-    images: ["/Ahnaf Abid.jpg"],
+    images: ["/ogImageAhnafAbidNirob.jpg"],
   },
   robots: {
     index: true,
